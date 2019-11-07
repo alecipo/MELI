@@ -6,4 +6,9 @@
     android:orientation="vertical"
     tools:context="com.example.test.ResultsFragment">
 
+    <Button
+        android:id="@+id/btnToDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Details" />
 </LinearLayout>

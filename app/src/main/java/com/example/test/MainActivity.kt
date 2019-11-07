@@ -2,7 +2,6 @@ package com.example.test
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,5 +17,4 @@ class MainActivity : AppCompatActivity() {
         //val name = view.findViewById(R.id.search_text)
     }
 
-    private val navController by lazy { findNavController(R.id.nav_host_fragment) }
 }
