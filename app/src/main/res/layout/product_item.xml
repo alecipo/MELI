@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
 
     <ImageView
-        android:id="@+id/product_img"
-        android:layout_width="130dp"
-        android:layout_height="201dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/product_thumbnail"
+        android:layout_width="91dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,11 +18,51 @@
 
     <TextView
         android:id="@+id/product_name"
-        android:layout_width="228dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/product_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/product_thumbnail"
+        tools:text="Product Name" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/product_name"
+        tools:text="$Price" />
+
+    <TextView
+        android:id="@+id/freeShipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/product_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_price"
+        tools:text="@string/free_shipment" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/product_img"
-        app:layout_constraintTop_toTopOf="@+id/product_img" />
+        app:layout_constraintStart_toStartOf="@+id/freeShipment"
+        app:layout_constraintTop_toBottomOf="@+id/freeShipment" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="36dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

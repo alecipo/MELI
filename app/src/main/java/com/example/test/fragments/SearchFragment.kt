@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_search.*
  */
 class SearchFragment : Fragment(R.layout.fragment_search), View.OnClickListener {
 
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
 
     override fun onClick(v: View?) {
         navController.navigate(R.id.action_searchFragment_to_resultsFragment)
@@ -24,5 +24,6 @@ class SearchFragment : Fragment(R.layout.fragment_search), View.OnClickListener 
         navController = Navigation.findNavController(view)
         btnToResults.setOnClickListener(this)
     }
+
 
 }
