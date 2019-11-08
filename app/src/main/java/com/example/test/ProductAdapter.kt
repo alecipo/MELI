@@ -6,14 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.test.data.ProductItem
+import com.example.test.models.Results
 import kotlinx.android.synthetic.main.product_item.view.*
 
-class ProductAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items: List<ProductItem> = ArrayList()
+class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    private var items: List<Results> = ArrayList()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         return ProductViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.product_item,
@@ -25,15 +26,11 @@ class ProductAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is ProductViewHolder -> {
-                holder.bind(items[position])
-            }
-        }
+    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+        holder.bind(items[position])
     }
 
-    fun submitList(productList: List<ProductItem>) {
+    fun submitList(productList: List<Results>) {
         items = productList
     }
 
@@ -41,15 +38,19 @@ class ProductAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private val productName = itemView.product_name
         private val productImg = itemView.product_img
 
-        fun bind(productItem: ProductItem) {
-            productName.text = productItem.name
+        fun bind(productItem: Results) {
+            productName.text = productItem.title
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
+            val url = productItem.thumbnail
             Glide.with(itemView.context)
-                .load(productItem.image)
+                .load(url)
+                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
                 .into(productImg)
         }
     }

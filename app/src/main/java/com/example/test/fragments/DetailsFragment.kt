@@ -1,6 +1,7 @@
-package com.example.test
+package com.example.test.fragments
 
 import androidx.fragment.app.Fragment
+import com.example.test.R
 
 /**
  * A simple [Fragment] subclass.

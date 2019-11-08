@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.test.DetailsFragment"
+        android:name="com.example.test.fragments.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.test.SearchFragment"
+        android:name="com.example.test.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search">
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultsFragment"
-        android:name="com.example.test.ResultsFragment"
+        android:name="com.example.test.fragments.ResultsFragment"
         android:label="fragment_results"
         tools:layout="@layout/fragment_results">
         <action

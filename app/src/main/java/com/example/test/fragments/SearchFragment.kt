@@ -1,10 +1,11 @@
-package com.example.test
+package com.example.test.fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.test.R
 import kotlinx.android.synthetic.main.fragment_search.*
 
 /**
