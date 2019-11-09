@@ -47,10 +47,9 @@ class ProductAdapter(var itemClickListener: ItemClickListener) :
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
 
-            val url = productItem.thumbnail
             Glide.with(itemView.context)
-                .load(url)
-                .centerCrop()
+                .load(productItem.thumbnail)
+                //.centerCrop()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_background)
                 .into(productImg)

@@ -1,5 +1,7 @@
 package com.example.test.models
 
+import java.io.Serializable
+
 data class Results(
 
     val id: String,
@@ -28,4 +30,4 @@ data class Results(
     val catalog_product_id: String,
     val tags: List<String>,
     val catalog_listing: Boolean
-)
+) : Serializable

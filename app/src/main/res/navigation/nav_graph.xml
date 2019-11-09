@@ -13,6 +13,9 @@
         <!--        <argument-->
         <!--            android:name="Result"-->
         <!--            app:argType="com.example.test.models.Results"/>-->
+        <argument
+            android:name="product"
+            app:argType="com.example.test.models.Results" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
