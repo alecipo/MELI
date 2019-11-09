@@ -16,7 +16,8 @@ class SearchFragment : Fragment(R.layout.fragment_search), View.OnClickListener 
     private lateinit var navController: NavController
 
     override fun onClick(v: View?) {
-        navController.navigate(R.id.action_searchFragment_to_resultsFragment)
+//        val action= SearchFragmentDirections.actionSearchFragmentToResultsFragment()
+//        navController.navigate(action)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

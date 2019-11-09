@@ -11,7 +11,8 @@
         android:layout_width="91dp"
         android:layout_height="138dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@mipmap/ic_launcher" />
@@ -45,18 +46,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/product_price"
-        app:layout_constraintTop_toBottomOf="@+id/product_price"
-        tools:text="@string/free_shipment" />
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/installments"
+        app:layout_constraintTop_toBottomOf="@+id/installments"
+        tools:text="Shipment" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/installments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/freeShipment"
-        app:layout_constraintTop_toBottomOf="@+id/freeShipment" />
+        android:text="@string/cuotas12"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/product_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_price" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

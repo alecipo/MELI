@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.test.ProductAdapter
 import com.example.test.R
@@ -22,6 +23,8 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
     lateinit var navController: NavController
     lateinit var productAdapter: ProductAdapter
     private var items: List<Results> = ArrayList()
+    val args: ResultsFragmentArgs by navArgs()
+    //private var data : SharedViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,7 +37,7 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
 
     private fun addData() {
         val service = RetrofitClientInstance.retrofitInstance.create(GetDataService::class.java)
-        val call = service.getBySearch("tablet")
+        val call = service.getBySearch(args.busqueda)
         call.enqueue(object : Callback<SearchResponse> {
             override fun onResponse(
                 call: Call<SearchResponse>,
@@ -61,7 +64,7 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
 
     override fun onProdClick(pos: Int) {
 // TODO Pasar la data al siguiente fragment
-
+        //data.setObj(items[pos])
 //        val action = ResultsFragmentDirections.actionResultsFragmentToDetailsFragment(items[pos])
 //        navController.navigate(action)
     }
