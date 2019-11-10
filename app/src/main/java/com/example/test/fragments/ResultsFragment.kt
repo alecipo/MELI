@@ -11,7 +11,7 @@ import com.example.test.ProductAdapter
 import com.example.test.R
 import com.example.test.models.Results
 import com.example.test.models.SearchResponse
-import com.example.test.services.GetDataService
+import com.example.test.services.MeliServices
 import com.example.test.services.RetrofitClientInstance
 import kotlinx.android.synthetic.main.fragment_results.*
 import retrofit2.Call
@@ -35,7 +35,7 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
 
 
     private fun addData() {
-        val service = RetrofitClientInstance.retrofitInstance.create(GetDataService::class.java)
+        val service = RetrofitClientInstance.retrofitInstance.create(MeliServices::class.java)
         val call = service.getBySearch(args.busqueda)
         call.enqueue(object : Callback<SearchResponse> {
             override fun onResponse(
@@ -48,7 +48,7 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
             }
 
             override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-                print("fallo")
+                t.printStackTrace()
             }
         })
 
