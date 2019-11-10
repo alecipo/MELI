@@ -1,6 +1,6 @@
 package com.example.test.models
 
-data class Available_filters(
+data class AvailableFilters(
 
     val id: String,
     val name: String,

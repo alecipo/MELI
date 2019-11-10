@@ -1,6 +1,6 @@
 package com.example.test.models
 
-data class Seller_address(
+data class SellerAddress(
 
     val id: String,
     val comment: String,

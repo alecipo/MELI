@@ -27,7 +27,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             .error(R.drawable.ic_launcher_background)
             .into(product_img)
 
-        product_soldQ.text = product.sold_quantity.toString()
+        product_soldQ.text = getString(R.string.sold, product.sold_quantity)
         product_name.text = product.title
         product_cond.text = product.condition
 

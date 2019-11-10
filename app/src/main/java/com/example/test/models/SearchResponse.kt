@@ -9,7 +9,7 @@ data class SearchResponse(
     val secondary_results: List<String>,
     val related_results: List<String>,
     val sort: Sort,
-    val available_sorts: List<Available_sorts>,
+    val available_sorts: List<AvailableSorts>,
     val filters: List<Filters>,
-    val available_filters: List<Available_filters>
+    val available_filters: List<AvailableFilters>
 )

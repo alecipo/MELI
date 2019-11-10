@@ -1,6 +1,6 @@
 package com.example.test.models
 
-data class Path_from_root(
+data class AvailableSorts(
 
     val id: String,
     val name: String

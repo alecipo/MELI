@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingTop="10dp"
     android:theme="@style/AppTheme">
 
     <ImageView
@@ -22,7 +21,6 @@
         android:layout_weight="1"
         android:background="@android:color/white"
         android:drawableStart="@drawable/ic_search"
-        android:ems="10"
         android:hint="@string/search_hint"
         android:imeOptions="actionSearch"
         android:inputType="text" />
