@@ -27,7 +27,6 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
     private fun getProduct() {
         val service = RetrofitClientInstance.retrofitInstance.create(MeliServices::class.java)
-        var id = args.product.id
         val call = service.getProduct(args.product.id)
         call.enqueue(object : Callback<Product> {
             override fun onResponse(
@@ -55,7 +54,6 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         product_soldQ.text = getString(R.string.sold, prod.sold_quantity)
         product_name.text = prod.title
         product_cond.text = prod.condition
-
     }
 }
 

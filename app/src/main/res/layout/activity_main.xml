@@ -20,11 +20,10 @@
 
         <EditText
             android:id="@+id/search_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
             android:layout_marginTop="6dp"
-            android:layout_weight="1"
-            android:background="@android:color/white"
+            android:background="@xml/style"
             android:drawableStart="@drawable/ic_search"
             android:hint="@string/search_hint"
             android:imeOptions="actionSearch"
@@ -34,8 +33,9 @@
             android:id="@+id/ic_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_gravity="end"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/ic_cart" />
 
     </androidx.appcompat.widget.Toolbar>
