@@ -28,7 +28,7 @@ data class Product(
     val video_id: String,
     val descriptions: List<Descriptions>,
     val accepts_mercadopago: Boolean,
-    val non_mercado_pago_payment_methods: List<String>,
+    val non_mercado_pago_payment_methods: List<NonMercadoPagoPaymentMethods>,
     val shipping: Shipping,
     val international_delivery_mode: String,
     val seller_address: SellerAddress,

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.test.ProductAdapter
 import com.example.test.R
@@ -55,6 +56,11 @@ class ResultsFragment : Fragment(R.layout.fragment_results), ProductAdapter.Item
     }
 
     private fun initRecyclerView() {
+        resultsRecyclerView.addItemDecoration(
+            DividerItemDecoration(
+                resultsRecyclerView.context, DividerItemDecoration.VERTICAL
+            )
+        )
         resultsRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = productAdapter

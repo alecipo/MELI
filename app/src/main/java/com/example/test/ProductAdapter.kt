@@ -55,7 +55,19 @@ class ProductAdapter(var itemClickListener: ItemClickListener) :
                 .into(productImg)
 
             productName.text = productItem.title
-            productPrice.text = "$" + productItem.price
+            productPrice.text = "$ " + productItem.price
+            if (productItem.installments.rate.toInt() == 0) {
+                itemView.installments.text =
+                    itemView.resources.getString(R.string.cuotas, productItem.installments.quantity)
+            } else {
+                itemView.installments.visibility = View.GONE
+            }
+
+            if (productItem.shipping.free_shipping) {
+                itemView.freeShipment.text = itemView.resources.getString(R.string.free_shipment)
+            } else {
+                itemView.freeShipment.visibility = View.GONE
+            }
         }
 
         init {

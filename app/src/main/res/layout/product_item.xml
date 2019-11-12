@@ -19,10 +19,9 @@
 
     <TextView
         android:id="@+id/product_name"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textAlignment="textStart"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/product_thumbnail"
@@ -33,7 +32,7 @@
         android:id="@+id/product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -42,30 +41,44 @@
         tools:text="$Price" />
 
     <TextView
+        android:id="@+id/installments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/product_price"
+        app:layout_constraintTop_toBottomOf="@+id/product_price"
+        tools:text="@string/cuotas" />
+
+    <TextView
         android:id="@+id/freeShipment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/green"
+        android:layout_marginBottom="8dp"
         app:layout_constraintStart_toStartOf="@+id/installments"
         app:layout_constraintTop_toBottomOf="@+id/installments"
         tools:text="Shipment" />
 
-    <TextView
-        android:id="@+id/installments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        tools:text="@string/cuotas12"
-        android:textColor="@color/green"
-        app:layout_constraintStart_toStartOf="@+id/product_price"
-        app:layout_constraintTop_toBottomOf="@+id/product_price" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="36dp" />
+        app:layout_constraintGuide_end="34dp" />
+
+    <TextView
+        android:id="@+id/full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/greenDark"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/freeShipment"
+        app:layout_constraintTop_toBottomOf="@+id/installments"
+        tools:text="FULL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
